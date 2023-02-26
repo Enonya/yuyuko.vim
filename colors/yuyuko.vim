@@ -12,10 +12,10 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta 0.3.7
+" Version: Beta 0.3.8
 " Maintainer: hylwxqwq (black_trees)
 " Create Time: 2022-03-16 09:26:56 UTC+8
-" Last Modified Time: 2023-02-26 14:19:36 UTC+8
+" Last Modified Time: 2023-02-26 21:49:33 UTC+8
  
 
 " Todo list
@@ -39,10 +39,10 @@ endif
 hi clear
 set bg=dark
 
-" function! <SID>SynStack()
-	" echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
-" endfunc
-" nnoremap <F12> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+	echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
+endfunc
+nnoremap <F12> :call <SID>SynStack()<CR>
 
 hi Normal ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=#080808 gui=NONE
 
@@ -55,8 +55,8 @@ hi Type       ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gu
 hi Constant   ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE 
 hi Statement  ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE 
 hi Special    ctermfg=99  ctermbg=NONE cterm=NONE guifg=#875fff  guibg=#080808 gui=NONE 
-hi String     ctermfg=195 ctermbg=NONE cterm=NONE guifg=#dfffff guibg=#080808 gui=NONE 
-hi cCppString ctermfg=195 ctermbg=NONE cterm=NONE guifg=#dfffff guibg=#080808 gui=NONE 
+hi String     ctermfg=140 ctermbg=NONE cterm=NONE guifg=#af87df guibg=#080808 gui=NONE 
+hi cCppString ctermfg=140 ctermbg=NONE cterm=NONE guifg=#af87df guibg=#080808 gui=NONE 
 hi Number     ctermfg=117 ctermbg=NONE cterm=NONE guifg=#87d7ff guibg=#080808 gui=NONE 
 hi Todo       ctermfg=212 ctermbg=254  cterm=NONE guifg=#ff87df guibg=#e4e4e4  gui=NONE 
 hi Operator   ctermfg=218 ctermbg=NONE cterm=NONE guifg=#ffdfdf guibg=#080808 gui=NONE 
@@ -70,8 +70,8 @@ hi LineNr        ctermfg=182  ctermbg=NONE cterm=NONE guifg=#dfafdf  guibg=#0808
 hi Cursor        ctermfg=242 ctermbg=NONE cterm=NONE guifg=NONE guibg=#666666 gui=NONE
 hi ColorColumn   ctermfg=225  ctermbg=NONE cterm=NONE guifg=#ffdfff  guibg=#080808 gui=NONE
 hi NonText       ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
-hi Pmenu         ctermfg=231  ctermbg=169  cterm=NONE guifg=#ffffff  guibg=#d75f5f  gui=NONE
-hi PmenuSel      ctermfg=239  ctermbg=168  cterm=NONE guifg=#4e4e4e  guibg=#df5f87  gui=NONE
+hi Pmenu         ctermbg=242  ctermfg=213  cterm=NONE guibg=#666666  guifg=#ff87ff  gui=NONE
+hi PmenuSel      ctermbg=242  ctermfg=168  cterm=NONE guibg=#666666  guifg=#df5f87  gui=NONE
 hi Visual        ctermfg=NONE ctermbg=244  cterm=NONE guifg=NONE guibg=#808080  gui=NONE
 hi Tag           ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
 hi Title         ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
@@ -86,7 +86,7 @@ hi Quote         ctermbg=207  ctermbg=NONE cterm=NONE guifg=#ff5fff  guibg=#0808
 " ==================
 hi StatusLine   ctermfg=177 ctermbg=NONE cterm=NONE guifg=#df87ff guibg=#080808 gui=NONE
 hi StatusLineNC ctermfg=183 ctermbg=NONE cterm=NONE guifg=#dfafff guibg=#080808 gui=NONE
-hi Character    ctermfg=195 ctermbg=NONE cterm=NONE guifg=#dfffff guibg=#080808 gui=NONE
+hi Character    ctermfg=140 ctermbg=NONE cterm=NONE guifg=#af87df guibg=#080808 gui=NONE
 hi ErrorMsg     ctermfg=110 ctermbg=NONE cterm=NONE guifg=#87afdf guibg=#080808 gui=NONE
 hi WaringMsg    ctermfg=111 ctermbg=NONE cterm=NONE guifg=#87afff guibg=#080808 gui=NONE
 hi ModeMsg      ctermfg=15  ctermbg=105  cterm=NONE guifg=#ffffff  guibg=#8787ff  gui=NONE
@@ -132,39 +132,52 @@ hi TagbarKind ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gu
 " ===========
 hi rubyInstanceVariable ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
 
+" Markdown syntax
+" ===============
+hi mkdRule     ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
+hi mkdListItem ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
+hi mkdURL	   ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE 
+hi mkdCode     ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE
+hi mkdHeading  ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
+
+" Netrw syntax
+" ============
+hi netrwPlain  ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE  
+hi netrwDir    ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE 
+hi netrwVersion ctermfg=147 ctermbg=NONE cterm=NONe guifg=#afafff guibg=#080808 gui=NONE
 
 " Used color list:
 " ================
-" 212:#ff87df
-" 147:#afafff
-" 225:#ffdfff
-" 153:#afd7ff
-" 99: #875fff
-" 195:#dfffff
-" 117:#87d7ff
-" 254:#e4e4e4
-" 218:#ffdfdf
-" 237:#3a3a3a
-" 231:#ffffff
-" 169:#d75faf
-" 239:#4e4e4e
-" 168:#df5f87
-" 244:#808080
-" 15: #ffffff
-" 207:#ff5fff
-" 177:#d787ff
-" 110:#87afdf
-" 111:#87afff
-" 93: #8700ff
-" 162:#d70087
-" 182:#dfafdf
-" 183:#dfafff
-" 28: #008700
-" 178:#dfaf00
-" 160:#df0000
-" 105:#8787ff
-" 104:#8787df
-" 242:#666666
+" 212 : #ff87df
+" 147 : #afafff
+" 225 : #ffdfff
+" 153 : #afd7ff
+" 99  : #875fff
+" 117 : #87d7ff
+" 254 : #e4e4e4
+" 218 : #ffdfdf
+" 237 : #3a3a3a
+" 231 : #ffffff
+" 169 : #d75faf
+" 239 : #4e4e4e
+" 168 : #df5f87
+" 244 : #808080
+" 15  : #ffffff
+" 207 : #ff5fff
+" 177 : #d787ff
+" 110 : #87afdf
+" 111 : #87afff
+" 93  : #8700ff
+" 162 : #d70087
+" 182 : #dfafdf
+" 183 : #dfafff
+" 28  : #008700
+" 178 : #dfaf00
+" 160 : #df0000
+" 105 : #8787ff
+" 104 : #8787df
+" 242 : #666666
+" 140 : #af87df
 
 
 " Unused Syntax member:
