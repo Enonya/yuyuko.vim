@@ -12,10 +12,10 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta 0.3.8
+" Version: Beta 0.3.9
 " Maintainer: hylwxqwq (black_trees)
 " Create Time: 2022-03-16 09:26:56 UTC+8
-" Last Modified Time: 2023-02-26 21:49:33 UTC+8
+" Last Modified Time: 2023-02-26 21:58:45 UTC+8
  
 
 " Todo list
@@ -39,10 +39,10 @@ endif
 hi clear
 set bg=dark
 
-function! <SID>SynStack()
-	echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
-endfunc
-nnoremap <F12> :call <SID>SynStack()<CR>
+" function! <SID>SynStack()
+	" echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
+" endfunc
+" nnoremap <F12> :call <SID>SynStack()<CR>
 
 hi Normal ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=#080808 gui=NONE
 
