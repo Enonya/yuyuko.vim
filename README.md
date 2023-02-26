@@ -1,78 +1,53 @@
-# yuyuko.vim
+# Yuyuko.vim
 
-```vim script
- 
- 
- " =========================================================
- " __          __             __          __                _
- " \ \        / /             \ \        / /               | |
-  " \ \      / /               \ \      / /                | |   __
-   " \ \    / /            _    \ \    / /            _    | |  / /
-    " \ \  / /   |\       | |    \ \  / /   |\       | |   | | / /
-     " \ \/ /    | |      | |     \ \/ /    | |      | |   | |/ /      __________
-      " \  /     | |      | |      \  /     | |      | |   | / /      |  ______  |
-      " / /      | |      | |      / /      | |      | |   | \ \      | |      | |
-     " / /       | |      | |     / /       | |      | |   | |\ \     | |      | |
-    " / /        | |      | |    / /        | |      | |   | | \ \    | |      | |
-   " / /         | |______| |   / /         | |______| |   | |  \ \   | |______| |
-  " /_/          \__________/  /_/   .vim   \__________/   \_|   \_\  \__________|
-
-" ==========================================================
-
-
+```vim
+" {{ ========================================================
+" __   __                 _              _           
+" \ \ / /   _ _   _ _   _| | _______   _(_)_ __ ___  
+"  \ V / | | | | | | | | | |/ / _ \ \ / / | '_ ` _ \ 
+"   | || |_| | |_| | |_| |   < (_) \ V /| | | | | | |
+"   |_| \__,_|\__, |\__,_|_|\_\___(_)_/ |_|_| |_| |_|
+"             |___/                                  
+" ========================================================= }} 
 ```
 
-## Intro
+## Introduction
 
-This is a vim color scheme.
+This is a vim/neovim color scheme.
 
 And the idea is from the color of [Yuyuko Saigyouji](https://en.touhouwiki.net/wiki/Yuyuko_Saigyouji).
 
 so this color scheme is called yuyuko.vim !
 
+## Updates
+
+**GUI Support!**: at 2023/02/26, I remembered that I forgot to add GUI support, so after an hour's work, GUI version of yuyuko.vim has came out!
+
 ## ScreenShot
 
-with this extentions:
+![ScreenShot.png](https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot/new1.png)
 
-- yuyuko.vim
-- vim-airline
-- vim-alirline-theme-violet
-- Tagbar
-- YouCompleteMe
-- rainbow (for pairs)
+![ScreenShot.png](https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot/new2.png)
 
-![clang](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/clang.png)
-![c#](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/c%23.png)
-![css](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/css.png)
-![py](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/python.png)
-![go](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/go.png)
-![java](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/java.png)
-![ruby](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/ruby.png)
-![js](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/js.png)
-![json](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/json.png)
-![sql](https://github.com/hylwxqwq/yuyuko.vim/blob/master/ScreenShot/sql.png)
+![ScreenShot.png](https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot/new3.png)
 
-## Install
+Old version's ScreenShots can be found here: <https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot>
 
-Just copy the `yuyuko.vim` to your `~/.vim/colors`
+## Installation
 
-and add 
+Install `colors/yuyuko.vim` and move it to your `$VIM/colors` directory.
 
-```vim script
+then add 
+
+```vim
 colorscheme yuyuko
 ```
 
-in your .vimrc
+in your `.vimrc/_vimrc`.
 
-## Attention
+## TodoList
 
-Now this color scheme only support Vim running in the terminal with 256 colors.
-
-If you use Gvim, it will probably don't work.
-
-## To-Do
-
-- [ ] GUI support.
+- [x] GUI support.
 - [x] Add used color list.
 - [ ] Change the structure of the color shceme.
 - [x] Logo and slogan for this project.
