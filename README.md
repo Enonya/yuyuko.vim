@@ -15,13 +15,13 @@
 
 This is a vim/neovim color scheme.
 
-And the idea is from the color of [Yuyuko Saigyouji](https://en.touhouwiki.net/wiki/Yuyuko_Saigyouji).
+The idea was from the color of [Yuyuko Saigyouji](https://en.touhouwiki.net/wiki/Yuyuko_Saigyouji).
 
-so this color scheme is called yuyuko.vim !
+So this color scheme is called yuyuko.vim !
 
-## Updates
+## Big Updates
 
-**GUI Support!**: at 2023/02/26, I remembered that I forgot to add GUI support, so after an hour's work, GUI version of yuyuko.vim has came out!
+**GUI Support!**:(Beta v0.3.7)at 2023/02/26, I remembered that I forgot to add GUI support, so after an hour's work, GUI version of yuyuko.vim has came out!
 
 ## ScreenShot
 
@@ -31,11 +31,9 @@ so this color scheme is called yuyuko.vim !
 
 ![ScreenShot.png](https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot/new3.png)
 
-Old version's ScreenShots can be found here: <https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot>
-
 ## Installation
 
-Install `colors/yuyuko.vim` and move it to your `$VIM/colors` directory.
+Download file `colors/yuyuko.vim` and move it to your `$VIM/colors` directory.
 
 then add 
 
@@ -44,6 +42,8 @@ colorscheme yuyuko
 ```
 
 in your `.vimrc/_vimrc`.
+
+**Attention**: if you are running vim without support of 256 colors, this color scheme may not work.
 
 ## TodoList
 
@@ -54,6 +54,7 @@ in your `.vimrc/_vimrc`.
 - [x] More ScreenShots.
 - [x] More support for js, json, java, ruby, sql, c#, css, xml, html, php, go.
 - [x] Fix the unexpected syntax in .py file and .vim file.
+- [x] Fix the unexpected syntax in .md file.
 
 ## Vscode version
 
