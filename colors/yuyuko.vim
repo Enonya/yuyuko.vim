@@ -12,10 +12,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta 0.4.6
+" Version: Beta 0.4.8
 " Maintainer: hylwxqwq (black_trees)
+" License: AGPL-3.0
 " Create Time: 2022-03-16 09:26:56 UTC+8
-" Last Modified Time: 2023-02-27 15:20:47 UTC+8
+" Last Modified Time: 2023-03-03 20:16:54 UTC+8
  
 
 " Big Todo list
@@ -36,7 +37,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-hi clear
+" hi clear
 set bg=dark
 
 " function! <SID>SynStack()
@@ -156,6 +157,13 @@ hi htmlBold            ctermfg=147 ctermbg=NONE cterm=NONE guifg=#afafff guibg=#
 hi netrwPlain   ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE  
 hi netrwDir     ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE 
 hi netrwVersion ctermfg=147 ctermbg=NONE cterm=NONe guifg=#afafff guibg=#080808 gui=NONE
+
+
+" Yaml syntax
+" ===========
+hi yamlBlockMappingKey ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE
+hi yamlPlainScalar     ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
+
 
 " Used color list:
 " ================

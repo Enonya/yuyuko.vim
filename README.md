@@ -54,7 +54,7 @@ in your `.vimrc/_vimrc`.
 - [x] More ScreenShots.
 - [x] More support for js, json, java, ruby, sql, c#, css, xml, html, php, go.
 - [x] Fix the unexpected syntax in .py file and .vim file.
-- [x] Fix the unexpected syntax in .md file.
+- [x] Fix the unexpected syntax in .md file and .yml file.
 
 ## Vscode version
 
