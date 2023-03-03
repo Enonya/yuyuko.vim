@@ -12,11 +12,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta 0.4.8
+" Version: Beta 0.4.10
 " Maintainer: hylwxqwq (black_trees)
 " License: AGPL-3.0
 " Create Time: 2022-03-16 09:26:56 UTC+8
-" Last Modified Time: 2023-03-03 20:16:54 UTC+8
+" Last Modified Time: 2023-03-03 20:37:53 UTC+8
  
 
 " Big Todo list
@@ -37,7 +37,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-" hi clear
+hi clear
 set bg=dark
 
 " function! <SID>SynStack()
