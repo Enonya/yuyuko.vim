@@ -12,11 +12,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta 0.4.10
+" Version: Beta 0.5.2
 " Maintainer: hylwxqwq (black_trees)
 " License: AGPL-3.0
-" Create Time: 2022-03-16 09:26:56 UTC+8
-" Last Modified Time: 2023-03-03 20:37:53 UTC+8
+" Create Time: 2023-03-03 20:37:53 UTC+8
+" Last Modified Time: 2023-04-15 10:55:53 UTC+8
  
 
 " Big Todo list
@@ -84,22 +84,29 @@ hi Boolean       ctermfg=147  ctermbg=NONE cterm=NONE guifg=#afafff  guibg=#0808
 hi MatchParen    ctermfg=212  ctermbg=15   cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
 hi StorangeClass ctermfg=225  ctermbg=NONE cterm=NONE guifg=#ffdfff  guibg=#080808 gui=NONE
 hi Function      ctermfg=225  ctermbg=NONE cterm=NONE guifg=#ffdfff  guibg=#080808 gui=NONE
-hi Quote         ctermbg=207  ctermbg=NONE cterm=NONE guifg=#ff5fff  guibg=#080808 gui=NONE
-
+hi Quote         ctermfg=207  ctermbg=NONE cterm=NONE guifg=#ff5fff  guibg=#080808 gui=NONE
+hi Folded        ctermfg=212  ctermbg=242  cterm=NONE guifg=#ff87df  guibg=#666666 gui=NONE
+hi FoldColumn    ctermfg=212  ctermbg=242  cterm=NONE guifg=#ff87df  guibg=#666666 gui=NONE
+hi SignColumn    ctermfg=212  ctermbg=242  cterm=NONE guifg=#ff87df  guibg=#666666 gui=NONE
+hi Directory     ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
+hi Identifier    ctermfg=153  ctermbg=NONE cterm=NONE guifg=#afd7ff  guibg=#080808 gui=NONE
+hi SpecialKey    ctermfg=153  ctermbg=NONE cterm=NONE guifg=#afd7ff  guibg=#080808 gui=NONE
 
 " Status Line syntax
 " ==================
 hi StatusLine   ctermfg=177 ctermbg=238  cterm=NONE guifg=#df87ff guibg=#444444 gui=NONE
 hi StatusLineNC ctermfg=183 ctermbg=238  cterm=NONE guifg=#dfafff guibg=#444444 gui=NONE
+hi StatusLineTerm   ctermfg=177 ctermbg=238  cterm=NONE guifg=#df87ff guibg=#444444 gui=NONE
+hi StatusLineTermNC ctermfg=183 ctermbg=238  cterm=NONE guifg=#dfafff guibg=#444444 gui=NONE
 hi Character    ctermfg=140 ctermbg=NONE cterm=NONE guifg=#af87df guibg=#080808 gui=NONE
 hi ErrorMsg     ctermfg=110 ctermbg=NONE cterm=NONE guifg=#87afdf guibg=#080808 gui=NONE
 hi WaringMsg    ctermfg=111 ctermbg=NONE cterm=NONE guifg=#87afff guibg=#080808 gui=NONE
 hi ModeMsg      ctermfg=15  ctermbg=105  cterm=NONE guifg=#ffffff guibg=#8787ff gui=NONE
 hi MoreMsg      ctermfg=15  ctermbg=104  cterm=NONE guifg=#ffffff guibg=#8787df gui=NONE
+hi NonText      ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=#080808 gui=NONE
 hi Question     ctermfg=93  ctermbg=NONE cterm=NONE guifg=#8700ff guibg=#080808 gui=NONE
 hi Error        ctermfg=254 ctermbg=162  cterm=NONE guifg=#e4e4e4 guibg=#d70087 gui=NONE
 hi Search       ctermfg=212 ctermbg=15   cterm=NONE guifg=#ff87df guibg=#ffffff gui=NONE
-
 
 " Diff syntax
 " ===========
@@ -109,12 +116,15 @@ hi DiffDelete ctermfg=15 ctermbg=160 cterm=NONE guifg=#ffffff guibg=#df0000 gui=
 hi DiffText   ctermfg=15 ctermbg=212 cterm=NONE guifg=#ffffff guibg=#ff87df gui=NONE
 
 
-" Vim Script syntax
+" Vim syntax
 " =================
-hi vimVar      ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi vimFunc     ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi vimFuncName ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-
+hi vimVar            ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
+hi vimFunc           ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
+hi vimFuncName       ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
+hi CtrlChar       ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=#080808 gui=NONE
+hi helpVim           ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
+hi helpSpecial       ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
+hi helpHyperTextJump ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE 
 
 " Python syntax
 " =============
@@ -144,6 +154,7 @@ hi mkdRule             ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#
 hi mkdListItem         ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
 hi mkdListItemCheckbox ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
 hi mkdURL	           ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE 
+hi mkdId               ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
 hi mkdCode             ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE
 hi mkdHeading          ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
 hi mkdItalic           ctermfg=147 ctermbg=NONE cterm=NONE guifg=#afafff guibg=#080808 gui=NONE
@@ -200,11 +211,11 @@ hi yamlPlainScalar     ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#
 " 135 : #af5fff
 " 250 : #bcbcbc
 " 238 : #444444
+" 249 : #b2b2b2
 
 
 " Unused Syntax member:
 " =====================
-" hi Indentifier
 " hi Underlined
 " hi Typedef
 " hi Conditional

@@ -21,15 +21,17 @@ So this color scheme is called yuyuko.vim !
 
 ## Big Updates
 
-**GUI Support!**:(Beta v0.3.7)at 2023/02/26, I remembered that I forgot to add GUI support, so after an hour's work, GUI version of yuyuko.vim has came out!
+**GUI Support!**: (Beta v0.3.7) at 2023/02/26, I remembered that I forgot to add GUI support, so after an hour's work, GUI version of yuyuko.vim has came out!
+
+**Big Fix**: (Beta v0.5.2) at 2023/04/15, I've got the time to fix many problems of the scheme, enjoy it!
 
 ## ScreenShot
 
-![ScreenShot.png](https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot/new1.png)
+![ScreenShot.png](./ScreenShot/new1.png)
 
-![ScreenShot.png](https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot/new2.png)
+![ScreenShot.png](./ScreenShot/new2.png)
 
-![ScreenShot.png](https://github.com/hylwxqwq/yuyuko.vim/tree/master/ScreenShot/new3.png)
+![ScreenShot.png](./ScreenShot/new3.png)
 
 ## Installation
 
@@ -55,8 +57,11 @@ in your `.vimrc/_vimrc`.
 - [x] More support for js, json, java, ruby, sql, c#, css, xml, html, php, go.
 - [x] Fix the unexpected syntax in .py file and .vim file.
 - [x] Fix the unexpected syntax in .md file and .yml file.
+- [x] Fix the unexpected syntax in all files.
 
 ## Vscode version
+
+**!!Not maintaining!!**
 
 [View on github](https://github.com/hylwxqwq/yuyuko-vim-vsc)
 
