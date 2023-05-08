@@ -12,11 +12,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta 0.5.2
+" Version: Beta 0.5.3
 " Maintainer: hylwxqwq (black_trees)
 " License: AGPL-3.0
 " Create Time: 2023-03-03 20:37:53 UTC+8
-" Last Modified Time: 2023-04-15 10:55:53 UTC+8
+" Last Modified Time: 2023-05-08 14:43:42 UTC+8
  
 
 " Big Todo list
@@ -48,7 +48,7 @@ set bg=dark
 " You can use this function to help you creating a clear issue.
 " Then I can fix the problem as soon as possible.
 
-hi Normal ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=#080808 gui=NONE
+hi Normal ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=#080808 gui=NONE
 
 
 " C/C++ syntax
