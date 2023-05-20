@@ -12,11 +12,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta 0.5.3
-" Maintainer: hylwxqwq (black_trees)
+" Version: Beta v0.5.4
+" Maintainer: hylwxqwq <black_trees@foxmail.com>
 " License: AGPL-3.0
 " Create Time: 2023-03-03 20:37:53 UTC+8
-" Last Modified Time: 2023-05-08 14:43:42 UTC+8
+" Last Modified Time: 2023-05-20 22:19:14 UTC+8
  
 
 " Big Todo list
@@ -27,18 +27,21 @@
 
 " Basic settings
 " ==============
-let g:colors_name="yuyuko"
 
-if &t_Co < 256
-  finish
-endif
+set background=dark
 
 if exists('syntax_on')
   syntax reset
 endif
-
 hi clear
-set bg=dark
+let g:colors_name = "yuyuko"
+
+if (has('termguicolors') && &termguicolors)
+  let s:t_Co = &t_Co
+endif
+if has('gui_running') " do not use &t_Co when gui is running!
+  let s:t_Co = 256
+endif
 
 " function! <SID>SynStack()
 	" echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
@@ -48,136 +51,99 @@ set bg=dark
 " You can use this function to help you creating a clear issue.
 " Then I can fix the problem as soon as possible.
 
-hi Normal ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=#080808 gui=NONE
+if s:t_Co >= 256
+	hi Normal                 ctermfg=212  ctermbg=235 cterm=NONE guifg=#ffffff guibg=#262626 gui=NONE
+	hi Comment                ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
+	hi PreProc                ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
+	hi Type                   ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE 
+	hi Constant               ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE 
+	hi Statement              ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE 
+	hi Special                ctermfg=99   ctermbg=235 cterm=NONE guifg=#875fff guibg=#262626 gui=NONE 
+	hi String                 ctermfg=140  ctermbg=235 cterm=NONE guifg=#af87df guibg=#262626 gui=NONE 
+	hi cCppString             ctermfg=140  ctermbg=235 cterm=NONE guifg=#af87df guibg=#262626 gui=NONE 
+	hi Number                 ctermfg=117  ctermbg=235 cterm=NONE guifg=#87d7ff guibg=#262626 gui=NONE 
+	hi Todo                   ctermfg=212  ctermbg=254 cterm=NONE guifg=#ff87df guibg=#e4e4e4 gui=NONE 
+	hi Operator               ctermfg=218  ctermbg=235 cterm=NONE guifg=#ffdfdf guibg=#262626 gui=NONE 
+	hi Float                  ctermfg=117  ctermbg=235 cterm=NONE guifg=#87d7ff guibg=#262626 gui=NONE 
+	hi Function               ctermfg=135  ctermbg=235 cterm=NONE guifg=#af5fff guibg=#262626 gui=NONE
+	hi VerSplit               ctermfg=237  ctermbg=235 cterm=NONE guifg=#3a3a3a guibg=#262626 gui=NONE
+	hi LineNr                 ctermfg=182  ctermbg=235 cterm=NONE guifg=#dfafdf guibg=#262626 gui=NONE
+	hi Cursor                 ctermfg=242  ctermbg=235 cterm=NONE guifg=NONE    guibg=#666666 gui=NONE
+	hi ColorColumn            ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi NonText                ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
+	hi Pmenu                  ctermbg=242  ctermfg=213 cterm=NONE guibg=#666666 guifg=#ff87ff gui=NONE
+	hi PmenuSel               ctermbg=242  ctermfg=168 cterm=NONE guibg=#666666 guifg=#df5f87 gui=NONE
+	hi Visual                 ctermfg=NONE ctermbg=244 cterm=NONE guifg=NONE    guibg=#808080 gui=NONE
+	hi Tag                    ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
+	hi Title                  ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
+	hi Boolean                ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
+	hi MatchParen             ctermfg=212  ctermbg=15  cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
+	hi StorangeClass          ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi Function               ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi Quote                  ctermfg=207  ctermbg=235 cterm=NONE guifg=#ff5fff guibg=#262626 gui=NONE
+	hi Folded                 ctermfg=212  ctermbg=242 cterm=NONE guifg=#ff87df guibg=#666666 gui=NONE
+	hi FoldColumn             ctermfg=212  ctermbg=242 cterm=NONE guifg=#ff87df guibg=#666666 gui=NONE
+	hi SignColumn             ctermfg=212  ctermbg=242 cterm=NONE guifg=#ff87df guibg=#666666 gui=NONE
+	hi Directory              ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
+	hi Identifier             ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE
+	hi SpecialKey             ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE
+	hi StatusLine             ctermfg=177  ctermbg=238 cterm=NONE guifg=#df87ff guibg=#444444 gui=NONE
+	hi StatusLineNC           ctermfg=183  ctermbg=238 cterm=NONE guifg=#dfafff guibg=#444444 gui=NONE
+	hi StatusLineTerm         ctermfg=177  ctermbg=238 cterm=NONE guifg=#df87ff guibg=#444444 gui=NONE
+	hi StatusLineTermNC       ctermfg=183  ctermbg=238 cterm=NONE guifg=#dfafff guibg=#444444 gui=NONE
+	hi Character              ctermfg=140  ctermbg=235 cterm=NONE guifg=#af87df guibg=#262626 gui=NONE
+	hi ErrorMsg               ctermfg=110  ctermbg=235 cterm=NONE guifg=#87afdf guibg=#262626 gui=NONE
+	hi WaringMsg              ctermfg=111  ctermbg=235 cterm=NONE guifg=#87afff guibg=#262626 gui=NONE
+	hi ModeMsg                ctermfg=15   ctermbg=105 cterm=NONE guifg=#ffffff guibg=#8787ff gui=NONE
+	hi MoreMsg                ctermfg=15   ctermbg=104 cterm=NONE guifg=#ffffff guibg=#8787df gui=NONE
+	hi NonText                ctermfg=249  ctermbg=235 cterm=NONE guifg=#b2b2b2 guibg=#262626 gui=NONE
+	hi Question               ctermfg=93   ctermbg=235 cterm=NONE guifg=#8700ff guibg=#262626 gui=NONE
+	hi Error                  ctermfg=254  ctermbg=162 cterm=NONE guifg=#e4e4e4 guibg=#d70087 gui=NONE
+	hi Search                 ctermfg=212  ctermbg=15  cterm=NONE guifg=#ff87df guibg=#ffffff gui=NONE
+	hi DiffAdd                ctermfg=15   ctermbg=28  cterm=NONE guifg=#ffffff guibg=#008700 gui=NONE
+	hi DiffChange             ctermfg=15   ctermbg=178 cterm=NONE guifg=#ffffff guibg=#dfaf00 gui=NONE 
+	hi DiffDelete             ctermfg=15   ctermbg=160 cterm=NONE guifg=#ffffff guibg=#df0000 gui=NONE
+	hi DiffText               ctermfg=15   ctermbg=212 cterm=NONE guifg=#ffffff guibg=#ff87df gui=NONE
+	hi vimVar                 ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi vimFunc                ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi vimFuncName            ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi CtrlChar               ctermfg=249  ctermbg=235 cterm=NONE guifg=#b2b2b2 guibg=#262626 gui=NONE
+	hi helpVim                ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE 
+	hi helpSpecial            ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi helpHyperTextJump      ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE 
+	hi pythonFunction         ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi pythonBuiltin          ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi pythonDecoratorName    ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi javaScriptIdentifier   ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi TagbarKind             ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi rubyInstanceVariable   ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi mkdRule                ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE 
+	hi mkdListItem            ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE 
+	hi mkdListItemCheckbox    ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE 
+	hi mkdURL	                ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE 
+	hi mkdId                  ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+	hi mkdCode                ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE
+	hi mkdHeading             ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE 
+	hi mkdItalic              ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
+	hi htmlItalic             ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
+	hi mkdBold                ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
+	hi htmlBold               ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
+	hi netrwPlain             ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE  
+	hi netrwDir               ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE 
+	hi netrwVersion           ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
+	hi yamlBlockMappingKey    ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE
+	hi yamlPlainScalar        ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
+  unlet s:t_Co
+  finish
+endif
 
-
-" C/C++ syntax
-" ============
-hi Comment    ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE
-hi PreProc    ctermfg=147 ctermbg=NONE cterm=NONE guifg=#afafff guibg=#080808 gui=NONE
-hi Type       ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE 
-hi Constant   ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE 
-hi Statement  ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE 
-hi Special    ctermfg=99  ctermbg=NONE cterm=NONE guifg=#875fff guibg=#080808 gui=NONE 
-hi String     ctermfg=140 ctermbg=NONE cterm=NONE guifg=#af87df guibg=#080808 gui=NONE 
-hi cCppString ctermfg=140 ctermbg=NONE cterm=NONE guifg=#af87df guibg=#080808 gui=NONE 
-hi Number     ctermfg=117 ctermbg=NONE cterm=NONE guifg=#87d7ff guibg=#080808 gui=NONE 
-hi Todo       ctermfg=212 ctermbg=254  cterm=NONE guifg=#ff87df guibg=#e4e4e4 gui=NONE 
-hi Operator   ctermfg=218 ctermbg=NONE cterm=NONE guifg=#ffdfdf guibg=#080808 gui=NONE 
-hi Float      ctermfg=117 ctermbg=NONE cterm=NONE guifg=#87d7ff guibg=#080808 gui=NONE 
-hi Function   ctermfg=135 ctermbg=NONE cterm=NONE guifg=#af5fff guibg=#080808 gui=NONE
-
-
-" Editor syntax
-" =============
-hi VerSplit      ctermfg=237  ctermbg=NONE cterm=NONE guifg=#3a3a3a  guibg=#080808 gui=NONE
-hi LineNr        ctermfg=182  ctermbg=NONE cterm=NONE guifg=#dfafdf  guibg=#080808 gui=NONE
-hi Cursor        ctermfg=242  ctermbg=NONE cterm=NONE guifg=NONE     guibg=#666666 gui=NONE
-hi ColorColumn   ctermfg=225  ctermbg=NONE cterm=NONE guifg=#ffdfff  guibg=#080808 gui=NONE
-hi NonText       ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
-hi Pmenu         ctermbg=242  ctermfg=213  cterm=NONE guibg=#666666  guifg=#ff87ff gui=NONE
-hi PmenuSel      ctermbg=242  ctermfg=168  cterm=NONE guibg=#666666  guifg=#df5f87 gui=NONE
-hi Visual        ctermfg=NONE ctermbg=244  cterm=NONE guifg=NONE     guibg=#808080 gui=NONE
-hi Tag           ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
-hi Title         ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
-hi Boolean       ctermfg=147  ctermbg=NONE cterm=NONE guifg=#afafff  guibg=#080808 gui=NONE
-hi MatchParen    ctermfg=212  ctermbg=15   cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
-hi StorangeClass ctermfg=225  ctermbg=NONE cterm=NONE guifg=#ffdfff  guibg=#080808 gui=NONE
-hi Function      ctermfg=225  ctermbg=NONE cterm=NONE guifg=#ffdfff  guibg=#080808 gui=NONE
-hi Quote         ctermfg=207  ctermbg=NONE cterm=NONE guifg=#ff5fff  guibg=#080808 gui=NONE
-hi Folded        ctermfg=212  ctermbg=242  cterm=NONE guifg=#ff87df  guibg=#666666 gui=NONE
-hi FoldColumn    ctermfg=212  ctermbg=242  cterm=NONE guifg=#ff87df  guibg=#666666 gui=NONE
-hi SignColumn    ctermfg=212  ctermbg=242  cterm=NONE guifg=#ff87df  guibg=#666666 gui=NONE
-hi Directory     ctermfg=212  ctermbg=NONE cterm=NONE guifg=#ff87df  guibg=#080808 gui=NONE
-hi Identifier    ctermfg=153  ctermbg=NONE cterm=NONE guifg=#afd7ff  guibg=#080808 gui=NONE
-hi SpecialKey    ctermfg=153  ctermbg=NONE cterm=NONE guifg=#afd7ff  guibg=#080808 gui=NONE
-
-" Status Line syntax
-" ==================
-hi StatusLine   ctermfg=177 ctermbg=238  cterm=NONE guifg=#df87ff guibg=#444444 gui=NONE
-hi StatusLineNC ctermfg=183 ctermbg=238  cterm=NONE guifg=#dfafff guibg=#444444 gui=NONE
-hi StatusLineTerm   ctermfg=177 ctermbg=238  cterm=NONE guifg=#df87ff guibg=#444444 gui=NONE
-hi StatusLineTermNC ctermfg=183 ctermbg=238  cterm=NONE guifg=#dfafff guibg=#444444 gui=NONE
-hi Character    ctermfg=140 ctermbg=NONE cterm=NONE guifg=#af87df guibg=#080808 gui=NONE
-hi ErrorMsg     ctermfg=110 ctermbg=NONE cterm=NONE guifg=#87afdf guibg=#080808 gui=NONE
-hi WaringMsg    ctermfg=111 ctermbg=NONE cterm=NONE guifg=#87afff guibg=#080808 gui=NONE
-hi ModeMsg      ctermfg=15  ctermbg=105  cterm=NONE guifg=#ffffff guibg=#8787ff gui=NONE
-hi MoreMsg      ctermfg=15  ctermbg=104  cterm=NONE guifg=#ffffff guibg=#8787df gui=NONE
-hi NonText      ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=#080808 gui=NONE
-hi Question     ctermfg=93  ctermbg=NONE cterm=NONE guifg=#8700ff guibg=#080808 gui=NONE
-hi Error        ctermfg=254 ctermbg=162  cterm=NONE guifg=#e4e4e4 guibg=#d70087 gui=NONE
-hi Search       ctermfg=212 ctermbg=15   cterm=NONE guifg=#ff87df guibg=#ffffff gui=NONE
-
-" Diff syntax
-" ===========
-hi DiffAdd    ctermfg=15 ctermbg=28  cterm=NONE guifg=#ffffff guibg=#008700 gui=NONE
-hi DiffChange ctermfg=15 ctermbg=178 cterm=NONE guifg=#ffffff guibg=#dfaf00 gui=NONE 
-hi DiffDelete ctermfg=15 ctermbg=160 cterm=NONE guifg=#ffffff guibg=#df0000 gui=NONE
-hi DiffText   ctermfg=15 ctermbg=212 cterm=NONE guifg=#ffffff guibg=#ff87df gui=NONE
-
-
-" Vim syntax
-" =================
-hi vimVar            ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi vimFunc           ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi vimFuncName       ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi CtrlChar       ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=#080808 gui=NONE
-hi helpVim           ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
-hi helpSpecial       ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi helpHyperTextJump ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE 
-
-" Python syntax
-" =============
-hi pythonFunction      ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi pythonBuiltin       ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi pythonDecoratorName ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-
-
-" Js syntax
-" =========
-hi javaScriptIdentifier ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-
-
-" Tagbar syntax
-" =============
-hi TagbarKind ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-
-
-" Ruby syntax
-" ===========
-hi rubyInstanceVariable ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-
-
-" Markdown syntax
-" ===============
-hi mkdRule             ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
-hi mkdListItem         ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
-hi mkdListItemCheckbox ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
-hi mkdURL	           ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE 
-hi mkdId               ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-hi mkdCode             ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE
-hi mkdHeading          ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff87df guibg=#080808 gui=NONE 
-hi mkdItalic           ctermfg=147 ctermbg=NONE cterm=NONE guifg=#afafff guibg=#080808 gui=NONE
-hi htmlItalic          ctermfg=147 ctermbg=NONE cterm=NONE guifg=#afafff guibg=#080808 gui=NONE
-hi mkdBold             ctermfg=147 ctermbg=NONE cterm=NONE guifg=#afafff guibg=#080808 gui=NONE
-hi htmlBold            ctermfg=147 ctermbg=NONE cterm=NONE guifg=#afafff guibg=#080808 gui=NONE
-
-
-" Netrw syntax
-" ============
-hi netrwPlain   ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE  
-hi netrwDir     ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE 
-hi netrwVersion ctermfg=147 ctermbg=NONE cterm=NONe guifg=#afafff guibg=#080808 gui=NONE
-
-
-" Yaml syntax
-" ===========
-hi yamlBlockMappingKey ctermfg=153 ctermbg=NONE cterm=NONE guifg=#afd7ff guibg=#080808 gui=NONE
-hi yamlPlainScalar     ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#080808 gui=NONE
-
+if s:t_Co < 256
+  finish
+endif
 
 " Used color list:
 " ================
+" 235 : #262626
 " 212 : #ff87df
 " 147 : #afafff
 " 225 : #ffdfff
@@ -213,26 +179,10 @@ hi yamlPlainScalar     ctermfg=225 ctermbg=NONE cterm=NONE guifg=#ffdfff guibg=#
 " 238 : #444444
 " 249 : #b2b2b2
 
-
-" Unused Syntax member:
-" =====================
-" hi Underlined
-" hi Typedef
-" hi Conditional
-" hi Label
-" hi Keyword
-" hi Exception
-" hi Include
-" hi Define
-" hi Macro
-" hi Structure
-" hi Debug
-" hi Underlined
-" hi Ignore
-
-
 " Reference:
 " =========================================================
 " <https://vimcn.github.io/vimcdoc/doc/syntax.html>
 " <https://zhuanlan.zhihu.com/p/20718108>
 " <https://blog.csdn.net/mdl13412/article/details/8129904>
+
+" vim: et ts=2 sw=2 sts=2
