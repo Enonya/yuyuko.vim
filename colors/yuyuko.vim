@@ -1,3 +1,4 @@
+
  
 " {{ ========================================================
 " __   __                 _              _           
@@ -12,11 +13,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta v0.5.4
+" Version: Beta v0.5.5
 " Maintainer: hylwxqwq <black_trees@foxmail.com>
 " License: AGPL-3.0
 " Create Time: 2023-03-03 20:37:53 UTC+8
-" Last Modified Time: 2023-05-20 22:19:14 UTC+8
+" Last Modified Time: 2023-05-25 19:30:08 UTC+8
  
 
 " Big Todo list
@@ -52,7 +53,7 @@ endif
 " Then I can fix the problem as soon as possible.
 
 if s:t_Co >= 256
-	hi Normal                 ctermfg=212  ctermbg=235 cterm=NONE guifg=#ffffff guibg=#262626 gui=NONE
+	hi Normal                 ctermfg=231  ctermbg=235 cterm=NONE guifg=#ffffff guibg=#262626 gui=NONE
 	hi Comment                ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
 	hi PreProc                ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
 	hi Type                   ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE 
@@ -65,14 +66,17 @@ if s:t_Co >= 256
 	hi Todo                   ctermfg=212  ctermbg=254 cterm=NONE guifg=#ff87df guibg=#e4e4e4 gui=NONE 
 	hi Operator               ctermfg=218  ctermbg=235 cterm=NONE guifg=#ffdfdf guibg=#262626 gui=NONE 
 	hi Float                  ctermfg=117  ctermbg=235 cterm=NONE guifg=#87d7ff guibg=#262626 gui=NONE 
-	hi Function               ctermfg=135  ctermbg=235 cterm=NONE guifg=#af5fff guibg=#262626 gui=NONE
-	hi VerSplit               ctermfg=237  ctermbg=235 cterm=NONE guifg=#3a3a3a guibg=#262626 gui=NONE
+	hi VertSplit              ctermfg=238  ctermbg=238 cterm=NONE guifg=#444444 guibg=#444444 gui=NONE
+  hi Wildmenu               ctermfg=15   ctermbg=105 cterm=NONE guifg=#ffffff guibg=#8787ff gui=NONE
 	hi LineNr                 ctermfg=182  ctermbg=235 cterm=NONE guifg=#dfafdf guibg=#262626 gui=NONE
 	hi Cursor                 ctermfg=242  ctermbg=235 cterm=NONE guifg=NONE    guibg=#666666 gui=NONE
+  hi CursorLine             ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+  hi CursorColumn           ctermfg=NONE ctermbg=NONE cterm=bold      guifg=NONE guibg=NONE gui=bold        " need improve maybe
+  hi CursorLineNr           ctermfg=104  ctermbg=235 cterm=NONE guifg=#8787df guibg=#262626 gui=NONE
 	hi ColorColumn            ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE
 	hi NonText                ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
-	hi Pmenu                  ctermbg=242  ctermfg=213 cterm=NONE guibg=#666666 guifg=#ff87ff gui=NONE
-	hi PmenuSel               ctermbg=242  ctermfg=168 cterm=NONE guibg=#666666 guifg=#df5f87 gui=NONE
+	hi Pmenu                  ctermbg=242  ctermfg=225 cterm=NONE guibg=#666666 guifg=#ffdfff gui=NONE
+	hi PmenuSel               ctermbg=242  ctermfg=153 cterm=NONE guibg=#666666 guifg=#afd7ff gui=NONE
 	hi Visual                 ctermfg=NONE ctermbg=244 cterm=NONE guifg=NONE    guibg=#808080 gui=NONE
 	hi Tag                    ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
 	hi Title                  ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE

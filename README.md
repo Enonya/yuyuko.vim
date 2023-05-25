@@ -29,7 +29,7 @@ The idea was from the color of [Yuyuko Saigyouji](https://en.touhouwiki.net/wiki
 
 ![Snapshots1.png](./snapshots/1.png)
 
-![Snapshots2.png](./snapshots/2.png)
+![Snapshots3.png](./snapshots/3.png)
 
 ## Installation
 
