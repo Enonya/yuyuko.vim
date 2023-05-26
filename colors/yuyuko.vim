@@ -13,11 +13,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta v0.5.5
+" Version: Beta v0.6.0
 " Maintainer: hylwxqwq <black_trees@foxmail.com>
 " License: AGPL-3.0
 " Create Time: 2023-03-03 20:37:53 UTC+8
-" Last Modified Time: 2023-05-25 19:30:08 UTC+8
+" Last Modified Time: 2023-05-26 16:03:19 UTC+8
  
 
 " Big Todo list
@@ -44,8 +44,15 @@ if has('gui_running') " do not use &t_Co when gui is running!
   let s:t_Co = 256
 endif
 
+let g:terminal_ansi_colors = [
+\ '#ffdfff', '#ff87df', '#afd7ff', '#afafff',
+\ '#ffdfff', '#ff87df', '#af87df', '#8787df',
+\ '#afd7ff', '#8787ff', '#875fff', '#ffdfff',
+\ '#dfa7ff', '#afafff', '#87d7ff', '#ffdfff',
+\ ]
+
 " function! <SID>SynStack()
-	" echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
+  " echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
 " endfunc
 " nnoremap <F12> :call <SID>SynStack()<CR>
 
@@ -142,6 +149,8 @@ if s:t_Co >= 256
 endif
 
 if s:t_Co < 256
+  hi CursorLine             ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+  hi CursorColumn           ctermfg=NONE ctermbg=NONE cterm=bold      guifg=NONE guibg=NONE gui=bold        " need improve maybe
   finish
 endif
 

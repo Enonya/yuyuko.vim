@@ -25,6 +25,8 @@ The idea was from the color of [Yuyuko Saigyouji](https://en.touhouwiki.net/wiki
 
 **Bug fix**: (Beta v0.5.4) at 2023/05/20, I've change the background color to turn down the contrast, and I've fix some bugs (in order to add the scheme on vimcolorschemes.com)
 
+**Terminal colors support!**: (Beta v0.6.0) at 2023/05/26, added configuration of `g:terminal_ansi_colors`.
+
 ## Screenshots
 
 ![Snapshots1.png](./snapshots/1.png)
