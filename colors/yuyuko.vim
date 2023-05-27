@@ -13,11 +13,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta v0.6.0
+" Version: Beta v0.6.1
 " Maintainer: hylwxqwq <black_trees@foxmail.com>
 " License: AGPL-3.0
 " Create Time: 2023-03-03 20:37:53 UTC+8
-" Last Modified Time: 2023-05-26 16:03:19 UTC+8
+" Last Modified Time: 2023-05-27 10:40:56 UTC+8
  
 
 " Big Todo list
@@ -45,9 +45,9 @@ if has('gui_running') " do not use &t_Co when gui is running!
 endif
 
 let g:terminal_ansi_colors = [
-\ '#ffdfff', '#ff87df', '#afd7ff', '#afafff',
-\ '#ffdfff', '#ff87df', '#af87df', '#8787df',
-\ '#afd7ff', '#8787ff', '#875fff', '#ffdfff',
+\ '#dfafdf', '#ff87df', '#afd7ff', '#afafff',
+\ '#afd7ff', '#ff87df', '#af87df', '#8787df',
+\ '#afd7ff', '#8787ff', '#875fff', '#dfafdf',
 \ '#dfa7ff', '#afafff', '#87d7ff', '#ffdfff',
 \ ]
 
