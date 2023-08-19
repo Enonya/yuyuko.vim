@@ -1,5 +1,3 @@
-
- 
 " {{ ========================================================
 " __   __                 _              _           
 " \ \ / /   _ _   _ _   _| | _______   _(_)_ __ ___  
@@ -13,11 +11,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta v0.6.1
-" Maintainer: hylwxqwq <black_trees@foxmail.com>
+" Version: Beta v0.7.2
+" Maintainer: Enonya (hylwxqwq) <black_trees@foxmail.com>
 " License: AGPL-3.0
-" Create Time: 2023-03-03 20:37:53 UTC+8
-" Last Modified Time: 2023-05-27 10:40:56 UTC+8
+" Create Time: 2022-03-03 20:37:53 UTC+8
+" Last Modified Time: 2023-08-19 09:34:21 UTC+8
  
 
 " Big Todo list
@@ -37,7 +35,7 @@ endif
 hi clear
 let g:colors_name = "yuyuko"
 
-if (has('termguicolors') && &termguicolors)
+if (has('termguicolors') || &termguicolors)
   let s:t_Co = &t_Co
 endif
 if has('gui_running') " do not use &t_Co when gui is running!
@@ -45,16 +43,16 @@ if has('gui_running') " do not use &t_Co when gui is running!
 endif
 
 let g:terminal_ansi_colors = [
-\ '#dfafdf', '#ff87df', '#afd7ff', '#afafff',
-\ '#afd7ff', '#ff87df', '#af87df', '#8787df',
-\ '#afd7ff', '#8787ff', '#875fff', '#dfafdf',
+\ '#ffdfff', '#ff87df', '#afd7ff', '#afafff',
+\ '#ffdfff', '#ff87df', '#af87df', '#8787df',
+\ '#afd7ff', '#8787ff', '#af87ff', '#ffdfff',
 \ '#dfa7ff', '#afafff', '#87d7ff', '#ffdfff',
 \ ]
 
 " function! <SID>SynStack()
   " echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
 " endfunc
-" nnoremap <F12> :call <SID>SynStack()<CR>
+" nnoremap <F8> :call <SID>SynStack()<CR>
 
 " You can use this function to help you creating a clear issue.
 " Then I can fix the problem as soon as possible.
@@ -66,11 +64,11 @@ if s:t_Co >= 256
 	hi Type                   ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE 
 	hi Constant               ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE 
 	hi Statement              ctermfg=153  ctermbg=235 cterm=NONE guifg=#afd7ff guibg=#262626 gui=NONE 
-	hi Special                ctermfg=99   ctermbg=235 cterm=NONE guifg=#875fff guibg=#262626 gui=NONE 
+	hi Special                ctermfg=99   ctermbg=235 cterm=NONE guifg=#af87ff guibg=#262626 gui=NONE 
 	hi String                 ctermfg=140  ctermbg=235 cterm=NONE guifg=#af87df guibg=#262626 gui=NONE 
 	hi cCppString             ctermfg=140  ctermbg=235 cterm=NONE guifg=#af87df guibg=#262626 gui=NONE 
 	hi Number                 ctermfg=117  ctermbg=235 cterm=NONE guifg=#87d7ff guibg=#262626 gui=NONE 
-	hi Todo                   ctermfg=212  ctermbg=254 cterm=NONE guifg=#ff87df guibg=#e4e4e4 gui=NONE 
+	hi Todo                   ctermfg=212  ctermbg=98  cterm=NONE guifg=#ff87df guibg=#875fd7 gui=NONE 
 	hi Operator               ctermfg=218  ctermbg=235 cterm=NONE guifg=#ffdfdf guibg=#262626 gui=NONE 
 	hi Float                  ctermfg=117  ctermbg=235 cterm=NONE guifg=#87d7ff guibg=#262626 gui=NONE 
 	hi VertSplit              ctermfg=238  ctermbg=238 cterm=NONE guifg=#444444 guibg=#444444 gui=NONE
@@ -110,7 +108,7 @@ if s:t_Co >= 256
 	hi NonText                ctermfg=249  ctermbg=235 cterm=NONE guifg=#b2b2b2 guibg=#262626 gui=NONE
 	hi Question               ctermfg=93   ctermbg=235 cterm=NONE guifg=#8700ff guibg=#262626 gui=NONE
 	hi Error                  ctermfg=254  ctermbg=162 cterm=NONE guifg=#e4e4e4 guibg=#d70087 gui=NONE
-	hi Search                 ctermfg=212  ctermbg=15  cterm=NONE guifg=#ff87df guibg=#ffffff gui=NONE
+	hi Search                 ctermfg=212  ctermbg=98  cterm=NONE guifg=#ff87df guibg=#875fd7 gui=NONE
 	hi DiffAdd                ctermfg=15   ctermbg=28  cterm=NONE guifg=#ffffff guibg=#008700 gui=NONE
 	hi DiffChange             ctermfg=15   ctermbg=178 cterm=NONE guifg=#ffffff guibg=#dfaf00 gui=NONE 
 	hi DiffDelete             ctermfg=15   ctermbg=160 cterm=NONE guifg=#ffffff guibg=#df0000 gui=NONE
@@ -161,7 +159,7 @@ endif
 " 147 : #afafff
 " 225 : #ffdfff
 " 153 : #afd7ff
-" 99  : #875fff
+" 141 : #af87ff
 " 117 : #87d7ff
 " 254 : #e4e4e4
 " 218 : #ffdfdf
@@ -191,6 +189,7 @@ endif
 " 250 : #bcbcbc
 " 238 : #444444
 " 249 : #b2b2b2
+" 98  : #875fd7
 
 " Reference:
 " =========================================================

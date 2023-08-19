@@ -45,7 +45,7 @@ in your `.vimrc` or `_vimrc` file.
 
 **Attention**: if you are running vim without support of 256 colors, this color scheme may not work.
 
-## Vscode version
+## Another version for VsCode
 
 [View on github](https://github.com/hylwxqwq/yuyuko-vim-vsc)
 
