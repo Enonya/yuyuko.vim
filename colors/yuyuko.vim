@@ -11,11 +11,11 @@
 " Infomation
 " ========== 
 " Name: Yuyuko Vim Color Scheme
-" Version: Beta v0.7.2
+" Version: Beta v0.7.3
 " Maintainer: Enonya (hylwxqwq) <black_trees@foxmail.com>
 " License: AGPL-3.0
 " Create Time: 2022-03-03 20:37:53 UTC+8
-" Last Modified Time: 2023-08-19 09:34:21 UTC+8
+" Last Modified Time: 2023-09-08 09:34:09 UTC+8
  
 
 " Big Todo list
@@ -59,6 +59,7 @@ let g:terminal_ansi_colors = [
 
 if s:t_Co >= 256
 	hi Normal                 ctermfg=231  ctermbg=235 cterm=NONE guifg=#ffffff guibg=#262626 gui=NONE
+	hi Terminal               ctermfg=231  ctermbg=235 cterm=NONE guifg=#ffffff guibg=#262626 gui=NONE
 	hi Comment                ctermfg=212  ctermbg=235 cterm=NONE guifg=#ff87df guibg=#262626 gui=NONE
 	hi PreProc                ctermfg=147  ctermbg=235 cterm=NONE guifg=#afafff guibg=#262626 gui=NONE
 	hi Type                   ctermfg=225  ctermbg=235 cterm=NONE guifg=#ffdfff guibg=#262626 gui=NONE 
